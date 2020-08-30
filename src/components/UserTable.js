@@ -4,7 +4,6 @@ import TableHead from '../components/TableHead';
 import SortFilterNavbar from './SortFilterNavbar';
 import TableBody from '../components/TableBody';
 import API from '../utils/API';
-import _ from 'lodash';
 
 const SortFilter = require('../utils/sortFilter');
 
