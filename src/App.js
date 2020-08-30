@@ -4,11 +4,9 @@ import Directory from './pages/Directory'
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Route exact path="/" component={Directory} />
-      </div>
-    </Router>
+    <div className="App">
+      <Directory />
+    </div>
   );
 }
 
