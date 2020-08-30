@@ -1,10 +1,9 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Directory from './pages/Directory'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor: "#343a40"}}>
       <Directory />
     </div>
   );

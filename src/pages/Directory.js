@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import API from '../utils/API';
 import Container from 'react-bootstrap/Container';
 import UserTable from '../components/UserTable';
+import NavBar from '../components/NavBar';
+
 class Directory extends Component {
 
   state = {
@@ -18,11 +20,13 @@ class Directory extends Component {
   }
 
   render() {
-    console.log(this.state.users[0]);
     return (
-      <Container>
-        <UserTable users={this.state.users} />
-      </Container>
+      <div>
+        <Container>
+          <NavBar />
+          <UserTable users={this.state.users} />
+        </Container>
+      </div>
     );
   }
 }

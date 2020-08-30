@@ -4,13 +4,12 @@ import TableData from '../components/TableData';
 import TableHead from '../components/TableHead';
 
 function UserTable(props) {
-  console.log(props);
   return(
-    <Table striped bordered>
-          
+    <Table striped bordered variant="dark">
+          <TableHead />
           <tbody>
             {props.users.map((user, index) => (
-              <TableData user={user} index={index} />
+              <TableData user={user} index={index} key={index} />
             ))}
           </tbody>
         </Table>

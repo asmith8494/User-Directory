@@ -9,6 +9,9 @@ function TableHead() {
         <th>First Name</th>
         <th>Last Name</th>
         <th>email</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>State</th>
       </tr>
     </thead>
   );
