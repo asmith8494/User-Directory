@@ -23,7 +23,7 @@ const sortFilter = (users, filteredGender, filteredState, sortBy) => {
 exports.sortFilter = sortFilter;
 
 const sort = (users, sortBy) => {
-
+  console.log("sortby: ", sortBy);
   if(sortBy === 'first') {
     return _.sortBy(users, (user) => {
       return user.name.first;
@@ -44,14 +44,18 @@ const sort = (users, sortBy) => {
 }
 
 const filter = (users, filter) => {
+  console.log("filterBy: ", filter);
   if(filter === 'male' || filter === 'female') {
     return _.filter(users, (user) => {
       return user.gender === filter;
     })
-  } else {
+  } else  if (filter !== 'none') {
     return _.filter(users, (user) => {
       const userState = user.location.state.toLowerCase().substring(0, filter.length);
       return userState.includes(filter);
     })
+  }
+  else {
+    return users;
   }
 }
